@@ -1,3 +1,9 @@
+:root {
+    --purpal: #702963;
+    /* <-- variable declaration */
+}
+
+
 * {
     padding: 0px;
 }
@@ -5,7 +11,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    /* hides the extra beyond viewport */
+
 }
 
 
@@ -113,7 +119,7 @@ h1 span {
     display: inline-block;
 
     vertical-align: middle;
-    
+
 
 
 }
@@ -136,4 +142,87 @@ h1 span {
 #wish {
 
     animation: wishpay 4s ease-in-out forwards;
+}
+
+.hero-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+}
+
+.hero-bottom p {
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-stretch: condensed;
+}
+
+.hero-bottom button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 18px;
+    background-color: var(--purpal);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 24px;
+
+
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    /* space between the two stats */
+    align-items: flex-start;
+    /* align top */
+    width: 70%;
+    margin: 0 auto;
+    /* center the container on page */
+    text-align: center;
+    gap: 20px;
+    /* optional spacing */
+}
+
+.stat {
+    flex: 1;
+    /* make both stats take available space equally */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* center content inside each stat */
+    margin: 0 10px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a052b;
+    /* dark purple */
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.logos {
+    margin-top: 10px;
+    display: flex;
+
+    justify-content: center;
+    /* center logos */
+    gap: 15px;
+    opacity: 0.6;
+}
+
+.logos img {
+
+    height: 100px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
