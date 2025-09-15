@@ -1,0 +1,52 @@
+.title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.title img {
+    width: 50px;
+    aspect-ratio: 1/1;
+    
+}
+
+.mid-options {
+    display: flex;
+    gap: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+
+
+}
+
+.right-options {
+    display: flex;
+    gap: 12px;
+
+}
+
+.right-options button {
+    border: 2px solid black;
+    padding: 6px 18px;
+    border-radius: 30px;
+    border-color: #702963;
+    color: #702963;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.right-options button.signup {
+    background-color: #702963;
+    color: white;
+
+
+
+
+}
