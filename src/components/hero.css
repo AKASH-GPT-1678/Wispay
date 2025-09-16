@@ -14,20 +14,25 @@ body {
 
 }
 
+#super-container {
+    position: relative;
+    border: 2px solid black;
+    height: 100vw;
+}
 
 #main-container {
-    position: relative;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* keeps left + right apart */
+
     align-items: flex-start;
     width: 100%;
-    /* stay inside screen */
+
     max-width: 100vw;
-    /* never overflow screen */
+
     overflow-x: hidden;
-    /* stops horizontal scrolling if overflow happens */
+
 }
 
 #left-section {
@@ -35,7 +40,7 @@ body {
     margin-top: 40pt;
     position: relative;
     min-height: 300px;
-    /* ensure the box is visible */
+
 }
 
 #left-section #purple {
@@ -71,11 +76,15 @@ body {
 #middle-section {
     margin-top: 50px;
     width: "100%";
+    position: relative;
+  ;
+    padding: 20px 50px;
 }
 
 #middle-section h1 {
     font-size: 70px;
     font-weight: bold;
+    margin-left: 50px;
 
 }
 
@@ -135,7 +144,7 @@ h1 span {
 }
 
 #finance {
-    animation: moveit 0.5s ease-in forwards;
+    margin-left: 20px;
 }
 
 
@@ -154,6 +163,38 @@ h1 span {
 
 
 }
+
+
+@keyframes movetoBottom {
+    0% {
+        transform: rotate(90deg) translateY(0px) scale(1);
+    }
+
+    25% {
+        transform: rotate(90deg) translateY(250px) scale(1.4);
+    }
+
+    50% {
+        transform: translateY(500px) scale(1.8);
+    }
+
+    75% {
+        transform: translateY(750px) scale(2.0);
+    }
+
+    100% {
+        transform: translateY(900px) scale(2.5) translateX(50px) rotate(-65deg);
+    }
+}
+
+#bank-card {
+    position: absolute;
+    width: 130px;
+
+    aspect-ratio: 1 / 1;
+    animation: movetoBottom 5s ease-in-out 0s 1 forwards;
+}
+
 
 .hero-bottom p {
     font-size: 16px;
