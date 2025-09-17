@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .integration-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4c1d95 0%, #6b21a8 50%, #7c2d92 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .integration-content {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  .left-section {
+    color: white;
+  }
+  
+  .integration-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .main-heading {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    color: white;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 48px;
+    max-width: 480px;
+  }
+  
+  .explore-btn {
+    background: white;
+    color: #4c1d95;
+    padding: 16px 32px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+  }
+  
+  .explore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.3);
+  }
+  
+  .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .integration-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .integration-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .integration-card:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .integration-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  }
+  
+  .card-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .card-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+
+  .integration-card.email .card-icon {
+    color: #60a5fa;
+  }
+  
+  .integration-card.discord .card-icon {
+    color: #7289da;
+  }
+  
+  .integration-card.storage .card-icon {
+    color: #10b981;
+  }
+  
+  .integration-card.paypal .card-icon {
+    color: #0070ba;
+  }
+  
+  .integration-card.slack .card-icon {
+    color: #e01e5a;
+  }
+  
+  .integration-card.notion .card-icon {
+    color: #000000;
+    background: white;
+    border-radius: 4px;
+    padding: 4px;
+  }
+  
+  .integration-card.shopify .card-icon {
+    color: #95bf47;
+  }
+  
+  /* Grid positioning for asymmetric layout */
+  .integration-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .integration-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .integration-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .integration-card:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .integration-card:nth-child(5) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  
+  .integration-card:nth-child(6) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  .integration-card:nth-child(7) {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  
+  /* Animation for floating effect */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .integration-card:nth-child(odd) {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 0s;
+  }
+  
+  .integration-card:nth-child(even) {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 3s;
+  }
+  
+
+  @media (max-width: 1024px) {
+    .integration-content {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      text-align: center;
+    }
+    
+    .main-heading {
+      font-size: 48px;
+    }
+    
+    .integration-grid {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .integration-container {
+      padding: 20px 15px;
+    }
+    
+    .main-heading {
+      font-size: 36px;
+      margin-bottom: 24px;
+    }
+    
+    .description {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+    
+    .integration-content {
+      gap: 40px;
+    }
+    
+    .integration-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 280px;
+    }
+    
+    .integration-card {
+      padding: 20px 16px;
+    }
+    
+    .integration-card:nth-child(7) {
+      grid-column: 1 / -1;
+      justify-self: center;
+      max-width: 130px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-heading {
+      font-size: 32px;
+    }
+    
+    .integration-badge {
+      font-size: 10px;
+      padding: 6px 12px;
+    }
+    
+    .explore-btn {
+      padding: 14px 28px;
+      font-size: 15px;
+    }
+  }

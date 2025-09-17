@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .wishpay-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+
+  .top-section {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+    height: 400px;
+  }
+  
+  .earn-rewards-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .earn-rewards-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+  }
+  
+  .earn-rewards-card p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .gift-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 120px;
+  }
+  
+  .gift-box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  
+  .gift-box-body {
+    width: 80px;
+    height: 60px;
+    background: #374151;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gift-box-lid {
+    width: 88px;
+    height: 20px;
+    background: #4b5563;
+    border-radius: 8px;
+    position: absolute;
+    top: 15px;
+    left: -4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gift-bow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .bow-left, .bow-right {
+    width: 15px;
+    height: 15px;
+    background: #6b7280;
+    border-radius: 50% 0;
+    position: absolute;
+  }
+  
+  .bow-left {
+    transform: rotate(-45deg);
+    left: -8px;
+  }
+  
+  .bow-right {
+    transform: rotate(135deg);
+    right: -8px;
+  }
+  
+  .bow-center {
+    width: 8px;
+    height: 12px;
+    background: #6b7280;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2px;
+  }
+  
+  .always-protected-card {
+    background: linear-gradient(135deg, #a855f7 0%, #8b5cf6 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .always-protected-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .always-protected-card p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .request-money-section {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .request-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  
+  .user-requests {
+    position: relative;
+  }
+  
+  .user-request {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 12px 0;
+  }
+  
+  .user-request:last-child {
+    margin-bottom: 0;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .user-avatar.jenny {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  }
+  
+  .user-avatar.jenna {
+    background: linear-gradient(135deg, #34d399, #10b981);
+  }
+  
+  .user-name {
+    flex: 1;
+    font-weight: 500;
+  }
+  
+  .amount {
+    font-weight: 600;
+  }
+  
+  .check-icon {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: #8b5cf6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+  }
+  
+  .check-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .bottom-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    height: 400px;
+  }
+  
+  .no-volatility-card {
+    background: linear-gradient(135deg, #581c87 0%, #6b21a8 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .no-volatility-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .no-volatility-card p {
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .chart-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .chart-period {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 6px 12px;
+    color: white;
+    font-size: 12px;
+  }
+  
+  .chart-amount {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .chart-graph {
+    height: 80px;
+    position: relative;
+  }
+  
+  .chart-svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .get-paid-faster-card {
+    background: #f1f5f9;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .get-paid-faster-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+  }
+  
+  .get-paid-faster-card p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+  
+  .phone-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .phone-screen {
+    width: 200px;
+    height: 120px;
+    background: #000;
+    border-radius: 20px;
+    padding: 12px 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .phone-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .phone-status {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .signal-bars,
+  .wifi-icon,
+  .battery-icon {
+    width: 12px;
+    height: 8px;
+    background: white;
+    border-radius: 1px;
+  }
+  
+  .phone-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .payment-user {
+    font-size: 14px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+  
+  .payment-amount {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .top-section,
+    .bottom-section {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    
+    .earn-rewards-card,
+    .always-protected-card,
+    .no-volatility-card,
+    .get-paid-faster-card {
+      padding: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .content-wrapper {
+      padding: 0 10px;
+    }
+    
+    h2 {
+      font-size: 24px !important;
+    }
+    
+    .chart-amount {
+      font-size: 28px !important;
+    }
+}

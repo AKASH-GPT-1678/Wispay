@@ -1,0 +1,33 @@
+#main-bar{
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+#headings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+   
+}
+
+.mid-text{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+#headings h1{
+    font-size: 48px;
+    font-weight: bold;
+}
+#headings button{
+    background-color: #E4D3F5;
+    padding: 10px 26px;
+    border-radius: 12px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #954AE0;
+    margin-top: 80px;
+}
